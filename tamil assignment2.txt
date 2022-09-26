@@ -1,0 +1,26 @@
+import random
+import time
+from itertools import count
+for i in count(0): # To monitor the temperature continuously
+ #random function to generate temperature
+ temperature=random.randrange(35,100);
+ #random function to generate due temperature to find humidity
+ due_temperature=random.randrange(1,35);
+ print("The temperature is ",temperature ,"C");
+ print("the due temperature is",due_temperature,"C");
+ #calculating vapour pressure
+ vapour_pressure=6.11*10*((7.5*temperature)/(237.3+temperature))
+ #calculating autual pressure
+ autual_pressure=6.11*10*((7.5*due_temperature)/(237.3+due_temperature)) 
+ #calculating humidity
+ humidity=(autual_pressure/vapour_pressure)*100
+ print("the humidity is",humidity,"%")
+
+ if(temperature>37):
+  print("The temperature is high")
+ else:
+   print("The temperature is low")
+   
+ time.sleep(2)
+ print("\n")
+  
