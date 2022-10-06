@@ -1,0 +1,47 @@
+#PROGRAM FOR TRAFFIC LIGHT
+
+import RPi.GPIO as GPIO  
+import time  
+#assign numbering for the GPIO using BCM  
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(4,GPIO.OUT)#green led
+GPIO.setup(3,GPIO.OUT)#yellow led
+GPIO.setup(2,GPIO.OUT)#red led
+while True:
+    #code for green led
+    GPIO.output(4,True)
+    time.sleep(1)
+    GPIO.OUTPUT(4,False)
+    
+    #code for yellow led
+    GPIO.output(3,True)
+    time.sleep(1)
+    GPIO.OUTPUT(3,False)
+
+    #code for red led
+    GPIO.output(2,True)
+    time.sleep(1)
+    GPIO.OUTPUT(2,False)
+GPIO.cleanup()
+
+#=====================================================
+#PROGRAM FOR BLINKING AN LED
+
+import RPi.GPIO as GPIO  
+import time  
+#assign numbering for the GPIO using BCM  
+GPIO.setmode(GPIO.BCM)  
+#assingn number for the GPIO using Board  
+#GPIO.setmode(GPIO.BOARD)  
+  
+cnt = 0    
+GPIO.setup(4, GPIO.OUT)  
+while True:
+    if  cnt == 0 :
+        GPIO.output(RED_LED, False)
+        cnt = 1
+    else:
+         GPIO.output(RED_LED, True)
+         cnt = 0
+         time.sleep(1)  
+GPIO.cleanup()  
