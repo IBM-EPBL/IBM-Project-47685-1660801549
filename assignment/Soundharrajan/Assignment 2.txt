@@ -1,7 +1,3 @@
-Build a python code assume you get temperature and humidity values and write a condition to continuously detect alarm in case of high temperature
-
-Ardino code:
-
 #include <SimpleDHT.h>
 #include <LiquidCrystal.h>
 char d;

@@ -1,3 +1,5 @@
+#PROGRAM FOR BLINKING AN LED
+
 import RPi.GPIO as GPIO  
 import time  
 #assign numbering for the GPIO using BCM  
